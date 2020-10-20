@@ -1,0 +1,9 @@
+# Node modules
+server/node_modules/
+frontend/node_modules/
+
+# Mac OS
+.DS_Store
+
+# Intellij Configuration Files
+.idea/
