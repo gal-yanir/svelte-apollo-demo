@@ -1,5 +1,6 @@
 <script>
-  import Books from "./Books.svelte";
+  import Header from "./components/Header.svelte";
+  import Books from "./components/Books.svelte";
   import ApolloClient from "apollo-boost";
   import { setClient } from "svelte-apollo";
 
@@ -18,6 +19,6 @@
 </style>
 
 <main>
-  <h1>Svelte Books</h1>
+  <Header />
   <Books />
 </main>

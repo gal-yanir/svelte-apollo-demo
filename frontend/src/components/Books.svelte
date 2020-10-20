@@ -1,6 +1,6 @@
 <script>
   import { getClient, query } from "svelte-apollo";
-  import { GET_BOOKS } from "./queries";
+  import { GET_BOOKS } from "../queries";
 
   const client = getClient();
   const books = query(client, { query: GET_BOOKS });
@@ -20,6 +20,7 @@
     Loading...
   {:then result}
     <p>Total Books: {result.data.books.length}</p>
+    <hr />
     {#each result.data.books as book}
       <li>{book.title} by {book.author}</li>
     {/each}
