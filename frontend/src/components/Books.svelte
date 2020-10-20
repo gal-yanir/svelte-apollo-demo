@@ -1,5 +1,6 @@
 <script>
   import { getClient, query } from "svelte-apollo";
+  import { fly } from "svelte/transition";
   import { GET_BOOKS } from "../queries";
 
   const client = getClient();
@@ -21,8 +22,8 @@
   {:then result}
     <p>Total Books: {result.data.books.length}</p>
     <hr />
-    {#each result.data.books as book}
-      <li>{book.title} by {book.author}</li>
+    {#each result.data.books as book, index (book)}
+      <li in:fly={{ x: 100, duration: 1000 }}>{book.title} by {book.author}</li>
     {/each}
   {:catch error}
     Error:
