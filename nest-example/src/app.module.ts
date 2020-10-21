@@ -1,17 +1,23 @@
 import { Module } from '@nestjs/common';
-import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CatsModule } from './cats/cats.module';
+import { GraphQLModule } from '@nestjs/graphql';
+import { TypeOrmModule } from '@nestjs/typeorm'
+import { InvoiceModule } from './invoice/invoice.module';
+import { CustomerModule } from './customer/customer.module';
+import { configService } from './config/config.service';
 
 @Module({
   imports: [
-    CatsModule,
-      GraphQLModule.forRoot({
+    InvoiceModule,
+    CustomerModule,
+    GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql'
-    })
+    }),
+
+    TypeOrmModule.forRoot(configService.getTypeOrmConfig()),
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
