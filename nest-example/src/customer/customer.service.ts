@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CustomerModel } from './models/customer.model';
+import { CustomerModel } from './entities/customer.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CustomerDTO } from './dto/customer.dto';

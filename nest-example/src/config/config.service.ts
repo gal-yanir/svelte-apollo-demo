@@ -48,7 +48,7 @@ class ConfigService {
             // migrations: ['src/migration/*.ts'],
             migrations: ['dist/migrations/**/*{.ts,.js}'],
             // migrations: [join(__dirname, 'migration', '*.{ts,js}')],
-            synchronize: false,
+            synchronize: true,
 
             cli: {
                 migrationsDir: 'migrations',

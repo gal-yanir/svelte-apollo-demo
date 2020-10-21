@@ -1,4 +1,4 @@
-import { PaymentStatus, Currency, Item } from "../models/invoice.model";
+import { PaymentStatus, Currency, Item } from "../entities/invoice.entity";
 import { InputType, Field } from "@nestjs/graphql";
 
 @InputType()

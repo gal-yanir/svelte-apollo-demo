@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module, forwardRef } from '@nestjs/common';
 import { InvoiceService } from './invoice.service';
 import { InvoiceResolver } from './invoice.resolver';
-import { InvoiceModel } from './models/invoice.model';
+import { InvoiceModel } from './entities/invoice.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([InvoiceModel]), forwardRef(() => CustomerModule)],

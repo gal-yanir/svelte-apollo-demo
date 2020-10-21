@@ -73,3 +73,26 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+
+## typeorm and postgres installation instructions
+
+- First step: initiate postgres db docker
+  npm run init:postgres:docker
+  
+- Second step: generate typeorm db configuration
+  npm run pretypeorm
+
+- Third step: Whenever we need to sync up our schema with the database, we can simply run this command
+  (please verify that synchronize param is true)
+  npm run typeorm:sync:db
+  
+  ## typeorm migration ongoing instructions
+
+ - Once you setup connection options you can create a new migration using CLI:
+   npm run typeorm:migration:create
+
+ - TypeORM is able to automatically generate migration files with schema changes you made.
+   typeorm migration:generate -n PostRefactoring
+
+ - Once you have a migration to run on the environment, you can run them using a CLI command:
+   npm run typeorm:migration:run

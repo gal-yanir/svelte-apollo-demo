@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "nest-example",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -19,12 +19,13 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "pretypeorm": "(rm ormconfig.json || :) && ts-node -r tsconfig-paths/register src/scripts/write-type-orm-config.ts",
+    "init:postgres:docker": ".\\src\\scripts\\start-db.sh",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "init:postgres:docker": "./src/scripts/start-db.sh",
+    "pretypeorm": "rm -rf ormconfig.json && ts-node -r tsconfig-paths/register src/scripts/write-type-orm-config.ts",
+    "typeorm:sync:db": "npm run build && typeorm schema:sync",
+    "typeorm:migration:create": "npm run typeorm -- migration:create -n migrations",
     "typeorm:migration:generate": "npm run typeorm -- migration:generate -n migrations",
-    "typeorm:migration:run": "npm run typeorm -- migration:run",
-    "typeorm:sync:db": "npm run build && typeorm schema:sync"
+    "typeorm:migration:run": "npm run typeorm -- migration:run"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
