@@ -1,11 +1,11 @@
 <script>
   import Header from "./components/Header.svelte";
-  import Books from "./components/Books.svelte";
+  import Coustomer from "./components/Customer.svelte";
   import ApolloClient from "apollo-boost";
   import { setClient } from "svelte-apollo";
 
   const client = new ApolloClient({
-    uri: "http://localhost:4000/graphql",
+    uri: "http://localhost:3000/graphql",
   });
 
   setClient(client);
@@ -20,5 +20,5 @@
 
 <main>
   <Header />
-  <Books />
+  <Coustomer />
 </main>

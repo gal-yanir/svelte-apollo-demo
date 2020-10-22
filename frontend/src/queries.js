@@ -8,3 +8,20 @@ export const GET_BOOKS = gql`
     }
   }
 `;
+
+export const GET_COUSTOMERS = gql`
+  {
+    customers {
+      id
+      name
+      phone
+      email
+      invoices {
+        invoiceNo
+        description
+        paymentStatus
+        total
+      }
+    }
+  }
+`;
