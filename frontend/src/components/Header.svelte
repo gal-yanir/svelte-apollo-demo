@@ -11,4 +11,4 @@
   }
 </style>
 
-<div data-testid="header" class="header">Svelte Books</div>
+<div data-testid="header" class="header">Svelte Invoices</div>

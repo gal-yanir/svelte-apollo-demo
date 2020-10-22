@@ -5,5 +5,5 @@ it("its works", async () => {
   const { getByTestId } = render(Header);
   const header = getByTestId("header");
 
-  expect(header.textContent).toBe("Svelte Books");
+  expect(header.textContent).toBe("Svelte Invoices");
 });
