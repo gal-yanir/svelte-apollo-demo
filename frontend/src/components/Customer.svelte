@@ -10,13 +10,23 @@
 <style>
   ul {
     list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
   }
   li {
     padding: 10px 0;
   }
+  .invoices {
+    margin: 10px;
+  }
+  .invoices-title {
+    background: black;
+    color: white;
+    padding: 10px;
+  }
   .table-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     border: 1px solid gray;
     padding: 5px;
   }
@@ -38,8 +48,8 @@
             & phone:
             {coustomer.phone}
           </div>
-          <div>
-            <div>invoices</div>
+          <div class="invoices">
+            <div class="invoices-title">invoices</div>
             <div class="table-header">
               <span>invoice No</span>
               <span>paymentStatus</span>
@@ -47,7 +57,9 @@
             </div>
             {#each coustomer.invoices as invoice}
               <span class="table-header">
-                {invoice.invoiceNo}, paymentStatus:{invoice.paymentStatus}
+                <span>{invoice.invoiceNo}</span>
+                <span>{invoice.paymentStatus}</span>
+                <span>{invoice.total}</span>
               </span>
             {/each}
           </div>
