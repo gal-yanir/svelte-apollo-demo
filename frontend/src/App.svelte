@@ -1,6 +1,7 @@
 <script>
   import Header from "./components/Header.svelte";
   import Coustomer from "./components/Customer.svelte";
+  import Notification from "./components/Notification.svelte";
   import ApolloClient from "apollo-boost";
   import { setClient } from "svelte-apollo";
 
@@ -20,5 +21,6 @@
 
 <main>
   <Header />
+  <Notification />
   <Coustomer />
 </main>
