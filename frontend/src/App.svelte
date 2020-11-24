@@ -1,6 +1,7 @@
 <script>
   import Header from "./components/Header.svelte";
   import Display from "./components/Display.svelte";
+  import Calc from "./components/Calc.svelte";
   import Coustomer from "./components/Customer.svelte";
   import Notification from "./components/Notification.svelte";
   import ApolloClient from "apollo-boost";
@@ -24,5 +25,6 @@
   <Header />
   <Notification />
   <Display />
+  <Calc />
   <Coustomer />
 </main>

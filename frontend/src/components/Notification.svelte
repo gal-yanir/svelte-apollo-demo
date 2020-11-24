@@ -2,7 +2,7 @@
   // import { fly } from "svelte/transition";
   import { fade, scale } from "svelte/transition";
 
-  let visible = true;
+  let visible = false;
 </script>
 
 <style>
@@ -18,6 +18,9 @@
     background: aqua;
     padding: 10px;
     border-radius: 5px;
+  }
+  label {
+    margin: 10px;
   }
 </style>
 
