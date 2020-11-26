@@ -23,7 +23,11 @@
     <p>Total Books: {result.data.books.length}</p>
     <hr />
     {#each result.data.books as book, index (book)}
-      <li in:fly={{ x: 100, duration: 1000 }}>{book.title} by {book.author}</li>
+      <li data-testid={index} in:fly={{ x: 100, duration: 1000 }}>
+        {book.title}
+        by
+        {book.author}
+      </li>
     {/each}
   {:catch error}
     Error:

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Header from "./components/Header.svelte";
   import Display from "./components/Display.svelte";
   import Calc from "./components/Calc.svelte";
